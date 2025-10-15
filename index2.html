@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B4 - Before | Official Press Kit (EPK)</title>
+    <!-- Carga de Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter y un color principal -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; /* Fondo muy oscuro, casi negro */
+        }
+        /* Custom styling para las fotos de perfil circulares o con borde */
+        .profile-img {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+        /* Animación de hover sutil para enlaces */
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.3), 0 4px 6px -2px rgba(124, 58, 237, 0.1);
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+
+    <!-- Contenedor Principal Centrado -->
+    <div class="max-w-xl mx-auto p-4 sm:p-6 pt-10">
+        
+        <!-- Sección de Encabezado y Perfil -->
+        <header class="text-center mb-10">
+            <!-- Imagen de Perfil (Reemplazar con la URL de B4 - Before) -->
+            <img 
+                src="img/logo.png" 
+                alt="Logo o Foto de Perfil de B4 - Before" 
+                class="profile-img w-36 h-36 rounded-full mx-auto mb-4 border-4 border-silver-600 shadow-2xl"
+             
+				onerror="this.onerror=null; this.src='C:/Proyectos/B4/logo.png';"
+            >
+            
+            <h1 class="text-4xl font-extrabold tracking-tight mb-2">B4 - BEFORE</h1>
+            
+            <p class="text-purple-400 text-lg font-medium">#House #Techno #Melodic</p>
+            
+            <!-- Breve Bio/Slogan -->
+            <p class="text-gray-400 mt-4 max-w-sm mx-auto">
+                20 años de experiencia fusionados en un nuevo sonido que explora las raíces del Deep House y el Techno Melódico.
+            </p>
+        </header>
+
+        <!-- Sección de Enlaces Principales (Links-in-Bio) -->
+        <main class="space-y-4">
+            
+            <!-- Link 1: Último Lanzamiento (Prioridad Alta) -->
+            <a href="URL_TU_ULTIMO_LANZAMIENTO_AQUI" target="_blank" class="link-button block w-full bg-purple-600 hover:bg-purple-700 text-center text-white py-4 rounded-xl font-bold uppercase tracking-wider transition duration-300 transform">
+                🎵 ESCUCHA NUESTRO ÚLTIMO TRACK
+            </a>
+
+            <!-- Link 2: Spotify -->
+            <a href="URL_SPOTIFY_PERFIL_AQUI" target="_blank" class="link-button block w-full bg-gray-800 hover:bg-gray-700 text-center text-white py-4 rounded-xl font-semibold transition duration-300 border border-gray-700">
+                <span class="mr-2">🎧</span> Perfil Oficial de Spotify
+            </a>
+
+            <!-- Link 3: SoundCloud -->
+            <a href="URL_SOUNDCLOUD_PERFIL_AQUI" target="_blank" class="link-button block w-full bg-gray-800 hover:bg-gray-700 text-center text-white py-4 rounded-xl font-semibold transition duration-300 border border-gray-700">
+                <span class="mr-2">☁️</span> SoundCloud (Sets & Mixes)
+            </a>
+
+            <!-- Link 4: Instagram -->
+            <a href="URL_INSTAGRAM_PERFIL_AQUI" target="_blank" class="link-button block w-full bg-gray-800 hover:bg-gray-700 text-center text-white py-4 rounded-xl font-semibold transition duration-300 border border-gray-700">
+                <span class="mr-2">📸</span> Síguenos en Instagram
+            </a>
+
+             <!-- Link 5: Press Kit Completo (PDF o Carpeta Drive) -->
+            <a href="presskit.html" target="_self" class="link-button block w-full bg-indigo-900/50 hover:bg-indigo-800/50 text-center text-indigo-300 py-4 rounded-xl font-semibold transition duration-300 border border-indigo-700/50 mt-6">
+                📄 PRESS KIT / BIO EXTENDIDA
+            </a>
+
+        </main>
+        
+        <!-- Sección de Booking/Contacto -->
+        <section class="mt-12 text-center">
+            <h2 class="text-xl font-bold mb-3 text-gray-300 uppercase tracking-widest">Booking & Contacto</h2>
+            <p class="text-gray-400 mb-2">Para consultas de Booking, Remixes o Colaboraciones:</p>
+            <a href="mailto:booking@b4before.com" class="text-purple-400 hover:text-purple-300 font-medium">
+                booking@b4before.com
+            </a>
+        </section>
+
+        <!-- Footer simple -->
+        <footer class="mt-10 text-center text-gray-600 text-sm">
+            &copy; 2024 B4 - Before.
+        </footer>
+
+    </div>
+
+</body>
+</html>
