@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NICO CARDI | OFFICIAL PRESS KIT (EPK)</title>
+	    <!-- Carga de Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Configuración para usar la fuente Inter y un color principal -->  
+    <style>
+        /* Estilos Base y Paleta */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #201A31; /* Fondo: Violeta Oscuro Profundo */
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 640px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        /* CLASES PARA EMBEDS RESPONSIVOS */
+        .aspect-ratio-16x9 {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #1f2937;
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+        .aspect-ratio-16x9 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Estilo para los scrollbars, haciendo el diseño más limpio */
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #111827; /* gray-900 */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #6D28D9; /* deep purple - used here as primary for contrast */
+            border-radius: 20px;
+            border: 2px solid #111827;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#201A31', // Base dark color
+                        'secondary-light': '#EABE3F', // Gold/Yellow accent
+                        'accent-purple': '#6D28D9', // Deep Purple
+                    },
+                }
+            }
+        }
+
+        // --- Funciones de Control de Menú Móvil ---
+
+        // Función principal para abrir/cerrar el menú
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('menu-button');
+
+            if (menu.classList.contains('hidden')) {
+                // Mostrar menú
+                menu.classList.remove('hidden');
+                // Cambiar ícono a "X" (Close)
+                button.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>';
+            } else {
+                // Ocultar menú
+                menu.classList.add('hidden');
+                // Cambiar ícono a "Menú" (Hamburger)
+                button.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+            }
+        }
+
+        // Función para ocultar el menú después de hacer clic en un enlace (solo en móvil)
+        function hideMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('menu-button');
+            
+            // Solo ocultar si está visible
+            if (!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                // Cambiar ícono a "Menú" (Hamburger)
+                button.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+            }
+        }
+    </script>
+</head>
+<body class="text-white">
+
+    <div class="min-h-screen">
+        <!-- Navbar Sticky con fondo transparente/oscuro -->
+        <nav class="sticky top-0 z-20 bg-primary-dark/90 backdrop-blur-sm border-b border-accent-purple/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo o Nombre de Artista y Botón de Menú (Flex container) -->
+                    <div class="flex items-center justify-between w-full md:w-auto">
+                        <!-- Logo (Ahora también activa el menú en móvil) -->
+						<a href="#top">
+							<img src="img/logo.png" alt="Logo B4" class="h-8 w-auto">
+						</a>
+                        
+                        <!-- Botón de Menú Móvil (Hamburguesa) -->
+                        <button id="menu-button" type="button" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-gray-400 hover:text-secondary-light hover:bg-accent-purple/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-light" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Abrir menú principal</span>
+                            <!-- Icono de Menú Hamburguesa por defecto -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Menú de Navegación (Desktop: siempre visible) -->
+                    <div class="hidden md:flex space-x-4">
+                            <!--   <a href="#about" class="text-gray-300 hover:text-secondary-light px-3 py-2 rounded-md text-sm font-medium transition duration-150">BIOGRAFÍA</a>
+                        <a href="#release" class="text-gray-300 hover:text-secondary-light px-3 py-2 rounded-md text-sm font-medium transition duration-150">LANZAMIENTOS</a>
+                        <a href="#media" class="text-gray-300 hover:text-secondary-light px-3 py-2 rounded-md text-sm font-medium transition duration-150">MEDIA</a>
+                        <a href="#contact" class="text-gray-300 hover:text-secondary-light px-3 py-2 rounded-md text-sm font-medium transition duration-150">CONTACTO</a>
+                    -->
+					    <a href="#release" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Lanzamientos</a>
+						<a href="#media" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Media Videos</a>
+						<a href="#fotos" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Fotos</a>
+						<a href="#sets" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Sets</a>
+						<a href="#bio" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Bio</a>
+						<a href="#contact" class="bg-[#E5A65E] px-3 py-1 rounded-full text-black hover:bg-[#f2e83d] transition">Contacto</a>
+					</div>
+                </div>
+            </div>
+
+            <!-- Menú de Navegación Móvil (Se despliega aquí) -->
+            <!-- Inicialmente hidden en móvil, se muestra con JS -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start bg-primary-dark/95 border-t border-accent-purple/50">
+                    <!-- Nota: Se añadió el evento onclick="hideMobileMenu()" para cerrar el menú al navegar -->
+                  <!--    <a href="#about" onclick="hideMobileMenu()" class="text-gray-300 hover:bg-accent-purple/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">BIOGRAFÍA</a>
+                    <a href="#release" onclick="hideMobileMenu()" class="text-gray-300 hover:bg-accent-purple/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">LANZAMIENTOS</a>
+                    <a href="#media" onclick="hideMobileMenu()" class="text-gray-300 hover:bg-accent-purple/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">MEDIA</a>
+                    <a href="#contact" onclick="hideMobileMenu()" class="text-gray-300 hover:bg-accent-purple/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">CONTACTO</a>
+					-->
+					<a href="#release" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Lanzamientos</a>
+					<a href="#media" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Media Videos</a>
+					<a href="#fotos" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Fotos</a>
+					<a href="#sets" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Sets</a>
+					<a href="#bio" class="text-gray-400 hover:text-[#EABE3F] transition hidden sm:block">Bio</a>
+					<a href="#contact" class="bg-[#E5A65E] px-3 py-1 rounded-full text-black hover:bg-[#f2e83d] transition">Contacto</a>
+				</div>
+            </div>
+        </nav>X|
+<!-- Contenedor Principal con Max-Width para Contenido -->
+    <div id="top" class="max-w-6xl mx-auto">
+<!-- Sección de Encabezado y Perfil -->      
+        <header class="section-padding text-center bg-gray-900/20 flex flex-col justify-end" style="background-image: url('img/DSC_3856.jpg'); background-size: cover; background-position: center; min-height: 80vh;">
+<!-- Contenido principal envuelto en un div para manejar el espaciado vertical -->            
+			
+			
+			<div class="pb-4"> <div class="bg-[#201A31]/80 p-6 rounded-xl inline-block mb-8 border-2 border-[#EABE3F]/50 shadow-2xl shadow-yellow-900/90">
+                    <h1 class="text-6xl sm:text-7xl font-extrabold tracking-tight mb-2 uppercase text-[#EABE3F] drop-shadow-lg gold-glow">NICO CARDI</h1>
+                    <p class="text-2xl font-light text-gray-200">Deep House • Old School</p>
+                </div>
+                
+                <div>
+                    <a href="#bio" class="text-gray-400 hover:text-white transition duration-300 animate-bounce">
+                        
+                    </a>
+                </div>
+            </div>
+        </header>
+<!-- NUEVA SECCIÓN: REDES SOCIALES (Links) -->
+		
+        <section id="social" class="py-6 bg-[#201A31] border-b border-[#C3A72A]/50">
+            <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-6 px-4">
+<!-- Instagram -->
+                <a href="https://www.instagram.com/nico.cardi/" target="_blank" class="text-gray-400 hover:text-[#EABE3F] transition duration-200 p-3 rounded-full hover:bg-white/10" aria-label="Instagram">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.71344 4.02039C7.91512 4.00366 8.95265 4 12.5002 4H15.266C17.2591 4.00346 17.3725 4.01989 17.7512 4.07472L17.7731 4.0779C18.5924 4.19606 19.2799 4.52282 19.8421 5.05975C20.1571 5.36286 20.374 5.6593 20.5694 6.05625C20.8076 6.54116 20.9246 6.99994 20.9782 7.68222C20.9897 7.82861 20.9949 10.1583 20.9949 12.4895C20.9949 14.8204 20.99 17.1544 20.9785 17.3008C20.9256 17.9722 20.8086 18.4349 20.5779 18.9107C20.1192 19.857 19.2761 20.5471 18.2579 20.8098C17.8887 20.9052 17.5547 20.9501 16.9796 20.9771C16.7744 20.9876 14.6282 20.9902 12.4821 20.9902C10.3359 20.9902 8.19104 20.9837 7.9806 20.9745C7.48393 20.951 7.09704 20.9013 6.74675 20.8111C5.73509 20.5497 4.87636 19.8491 4.42674 18.9159C4.19147 18.4284 4.08037 17.9827 4.02155 17.2742C4.00456 17.073 4.00064 16.0365 4.00064 12.4918C4.00064 12.0575 4.00047 11.6633 4.00031 11.3051C4.00004 10.6782 3.99981 10.1611 4.00064 9.73062C4.00398 7.73524 4.02021 7.62328 4.07541 7.24248C4.07635 7.23596 4.07731 7.22935 4.07828 7.22266C4.19657 6.40418 4.52333 5.71563 5.06249 5.15595C5.35853 4.84906 5.6585 4.63013 6.03885 4.44126C6.53239 4.19553 6.98542 4.08091 7.71344 4.02039Z" fill="currentColor"></path></svg>
+                </a>
+ <!-- YouTube -->               
+                <a href="https://www.youtube.com/@nicocardimusic" target="_blank" class="text-gray-400 hover:text-[#EABE3F] transition duration-200 p-3 rounded-full hover:bg-white/10" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewBox="0 0 24 24" class="w-8 h-8"><path d="m10 15 5.19-3L10 9v6Zm11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44a2.34 2.34 0 0 1-1.73-1.73c-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83 1.48 1.73-1.73a14.1 14.1 0 0 1 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83-.44.9.25 1.48.83 1.73 1.73Z"></path></svg>
+                </a>
+<!-- Spotify -->
+                <a href="https://open.spotify.com/user/gsacbtf6m72ywswogh8g2sq2m" target="_blank" class="text-gray-400 hover:text-[#EABE3F] transition duration-200 p-3 rounded-full hover:bg-white/10" aria-label="Spotify">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8"><path d="M 20 5 C 11.8 5 5 11.8 5 20 C 5 28.3 11.8 35 20 35 C 28.3 35 35 28.3 35 20 C 35 11.8 28.4 5 20 5 Z M 26.9 26.6 C 26.6 27.1 26 27.3 25.6 26.9 C 22.1 24.8 17.6 24.3 12.4 25.5 C 11.9 25.6 11.4 25.3 11.3 24.9 C 11.1 24.4 11.5 23.9 11.9 23.8 C 17.6 22.5 22.5 23 26.4 25.4 C 27 25.6 27.1 26.3 26.9 26.6 Z M 28.8 22.5 C 28.4 23 27.8 23.3 27.1 22.9 C 23.1 20.4 16.9 19.6 12.3 21.1 C 11.6 21.3 11 21 10.9 20.4 C 10.8 19.8 11 19.1 11.6 19 C 17.1 17.4 23.9 18.1 28.5 21 C 28.9 21.3 29.1 22 28.8 22.5 Z M 28.9 18.4 C 24 15.5 16 15.3 11.5 16.6 C 10.8 16.9 10 16.4 9.8 15.8 C 9.5 15 10 14.3 10.6 14 C 16 12.4 24.8 12.8 30.3 16 C 30.9 16.4 31.1 17.3 30.8 18 C 30.4 18.5 29.5 18.8 28.9 18.4 Z" fill="currentColor"></path></svg>
+                </a>
+<!-- SoundCloud -->                
+                <a href="https://soundcloud.com/nicocardi" target="_blank" class="text-gray-400 hover:text-[#EABE3F] transition duration-200 p-3 rounded-full hover:bg-white/10" aria-label="SoundCloud">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8"><path d="M2.082 21.6346C2.0055 21.6346 1.94477 21.6965 1.93488 21.7848L1.73009 23.4129C1.68803 23.7473 1.6884 24.0856 1.73118 24.4199L1.93488 26.0114C1.94477 26.0997 2.00546 26.1612 2.082 26.1612C2.1561 26.1612 2.21646 26.1002 2.22828 26.0122L2.45592 24.5111C2.5157 24.1169 2.5162 23.7159 2.45742 23.3216L2.22828 21.7844C2.21683 21.6965 2.15573 21.6346 2.082 21.6346ZM3.5899 20.4699C3.57727 20.3783 3.51458 20.3151 3.43729 20.3151C3.3596 20.3151 3.29532 20.3804 3.28468 20.4699C3.28468 20.4705 3.0644 22.5766 2.96826 23.4958C2.939 23.7755 2.93934 24.0575 2.96925 24.3372L3.28468 27.2867C3.29495 27.3771 3.35923 27.4423 3.43729 27.4423C3.51417 27.4423 3.5769 27.3788 3.58949 27.2876L3.94148 24.394C3.98006 24.0768 3.9805 23.7561 3.94279 23.4388L3.5899 20.4699ZM9.26981 17.2908C9.12194 17.2908 8.99967 17.4174 8.9926 17.5784L8.70553 23.9194L8.9926 28.0172C9.00008 28.1773 9.12194 28.3036 9.26981 28.3036C9.41689 28.3036 9.53875 28.1769 9.54742 28.0164V28.0176L9.87194 23.9194L9.54742 17.5784C9.53871 17.4174 9.41686 17.2908 9.26981 17.2908ZM6.33008 19.4946C6.21652 19.4946 6.12386 19.5896 6.11474 19.7163L5.81542 23.6056C5.79944 23.8133 5.79971 24.022 5.81623 24.2297L6.11474 27.9825C6.12341 28.1084 6.21648 28.2033 6.33008 28.2033C6.44245 28.2033 6.53511 28.1084 6.545 27.9825L6.88047 24.272C6.90178 24.0362 6.90213 23.7991 6.88151 23.5633L6.545 19.7154C6.53511 19.5896 6.44245 19.4946 6.33008 19.4946ZM12.2573 28.3032C12.4406 28.3032 12.5897 28.1484 12.5971 27.9503L12.8787 23.9214L12.5976 15.4793C12.5901 15.2812 12.441 15.1264 12.2577 15.1264C12.0727 15.1264 11.9233 15.2816 11.9173 15.4797L11.6677 23.921L11.9173 27.9516C11.9232 28.148 12.0727 28.3032 12.2573 28.3032ZM18.3733 28.3222C18.6257 28.3222 18.8339 28.1047 18.8386 27.8373L19.035 23.9239L18.8385 14.1739C18.8342 13.9069 18.6256 13.689 18.3732 13.689C18.1205 13.689 17.9119 13.9065 17.9079 14.1743L17.7325 23.9206C17.7325 23.9264 17.8837 27.2992 17.9054 27.7824C17.9071 27.8219 17.9071 27.8597 17.9123 27.899C17.9438 28.1364 18.14 28.3222 18.3733 28.3222ZM15.292 28.307C15.5116 28.307 15.6887 28.1224 15.6946 27.8872V27.8901L15.9335 23.9223L15.6942 15.4191C15.6883 15.1838 15.5112 14.9998 15.2916 14.9998C15.0703 14.9998 14.8933 15.1839 14.8886 15.4191L14.6761 23.9227L14.889 27.8897C14.8937 28.1225 15.0708 28.307 15.292 28.307ZM7.79422 28.2698C7.92474 28.2698 8.03045 28.1604 8.0403 28.0164L8.35736 24.263C8.37677 24.0333 8.37628 23.8022 8.35588 23.5725L8.0403 20.0188C8.03085 19.8748 7.92519 19.7662 7.79422 19.7662C7.66176 19.7662 7.55606 19.8756 7.5478 20.0205L7.26675 23.6134C7.25091 23.816 7.25052 24.0195 7.26559 24.2221L7.5478 28.016C7.55647 28.1604 7.66173 28.2698 7.79422 28.2698ZM4.87779 28.0453C4.9732 28.0453 5.05048 27.9664 5.06152 27.8575L5.4123 24.3023C5.43759 24.0459 5.43806 23.7877 5.4137 23.5313L5.06189 19.8277C5.05045 19.7183 4.97316 19.6395 4.87776 19.6395C4.78113 19.6395 4.70384 19.7187 4.69399 19.8277L4.38018 23.5769C4.36124 23.8031 4.3616 24.0306 4.38125 24.2567L4.69399 27.8567C4.70347 27.966 4.78076 28.0453 4.87779 28.0453ZM16.8267 15.2775C16.5882 15.2775 16.3969 15.476 16.3922 15.7303L16.1982 23.9231L16.3922 27.8653C16.3969 28.1162 16.5878 28.3148 16.8267 28.3148C17.0649 28.3148 17.255 28.1167 17.2605 27.8624V27.8657L17.4781 23.9235L17.2605 15.7294C17.255 15.476 17.0649 15.2775 16.8267 15.2775ZM10.758 28.3115C10.9228 28.3115 11.0589 28.1707 11.0668 27.9912L11.3696 23.9206L11.0668 16.1293C11.0585 15.9494 10.9228 15.8091 10.758 15.8091C10.5916 15.8091 10.456 15.9498 10.4488 16.1293L10.1807 23.9206L10.4493 27.9929C10.4559 28.1707 10.5916 28.3115 10.758 28.3115ZM14.1398 27.9272V27.9252L14.4 23.9218L14.1398 15.1954C14.1334 14.9787 13.9702 14.8087 13.7687 14.8087C13.566 14.8087 13.4027 14.9783 13.3972 15.1954L13.1662 23.9214L13.3976 27.9268C13.4031 28.1414 13.5664 28.311 13.7687 28.311C13.9706 28.311 14.1331 28.1414 14.1398 27.9256L14.1398 27.9272ZM33.8238 18.8917C32.9435 18.8917 31.9983 18.3401 31.7452 17.4969C30.7306 14.1179 27.7175 11.6667 24.1541 11.6667C23.1367 11.6667 22.145 11.8763 21.2692 12.2308C20.9289 12.3687 20.8382 12.5106 20.8351 12.7859V27.7675C20.8386 28.0564 21.0527 28.297 21.3221 28.3255C21.3335 28.3267 33.743 28.3333 33.8235 28.3333C36.314 28.3333 38.3334 26.2198 38.3334 23.6127C38.3334 21.0056 36.3144 18.8917 33.8238 18.8917ZM19.9131 12.7727C19.6422 12.7727 19.4198 13.0055 19.4159 13.2915L19.2124 23.9251L19.4163 27.7844C19.4198 28.0663 19.6422 28.2987 19.9131 28.2987C20.1832 28.2987 20.4056 28.0663 20.4095 27.7803V27.7849L20.6308 23.9251L20.4095 13.2907C20.4056 13.0055 20.1832 12.7727 19.9131 12.7727Z" fill="currentColor"></path></svg>
+                </a>
+<!-- Facebook -->
+                <a href="https://www.facebook.com/nicocardinale" target="_blank" class="text-gray-400 hover:text-[#EABE3F] transition duration-200 p-3 rounded-full hover:bg-white/10" aria-label="Facebook">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8"><path d="M21 12.0548C21 7.05433 16.9702 3 12 3C7.02981 3 3 7.05433 3 12.0548C3 16.5739 6.29068 20.32 10.5939 21V14.6728H8.30811V12.0548H10.5939V10.0594C10.5939 7.79032 11.938 6.53608 13.9934 6.53608C14.9781 6.53608 16.0083 6.71307 16.0083 6.71307V8.94143H14.873C13.7554 8.94143 13.4061 9.63922 13.4061 10.3561V12.0548H15.902L15.5033 14.6728H13.4061V21C17.7093 20.3213 21 16.5751 21 12.0548Z" fill="currentColor"></path></svg>
+                </a>
+                
+            </div>
+        </section>
+
+<!-- Sección: Último Lanzamiento (Único) -->
+		
+        <section id="release" class="section-padding text-center bg-gray-900/50 border-t border-purple-900/50">
+            <h2 class="text-4xl font-bold mb-10 uppercase tracking-widest text-purple-400">Último Lanzamiento</h2>
+
+<!-- Contenedor del lanzamiento - MODIFICADO: md:flex-row para side-by-side en escritorio -->
+<!-- Se cambió el layout principal para que la imagen y el texto estén al lado en desktop (md:flex-row) -->
+
+            <div class="max-w-4xl mx-auto flex flex-col items-center md:flex-row md:items-start md:gap-12">
+
+<!-- Imagen del Álbum/Single -->
+<!-- Se ajustó el tamaño y se eliminó el margin-auto redundante, se añadió margin-right en desktop -->
+			
+                <div class="w-64 h-64 md:w-72 md:h-72 mb-6 md:mb-0 rounded-lg overflow-hidden transform hover:scale-[1.02] transition duration-500 shadow-2xl shadow-purple-900 flex-shrink-0">
+                    <img src="img\DSC_3826.jpg" alt="Portada del Último Lanzamiento" class="w-full h-full object-cover">
+                </div>
+<!-- Detalle del Lanzamiento - MODIFICADO: text-left para el contenido en desktop -->
+
+                <div class="text-center md:text-left">
+                    <h3 class="text-3xl font-extrabold text-white mb-2">CAFÉ MOVIDO 2025</h3>
+                    <p class="text-lg italic text-purple-300 mb-4">Set</p>
+                    <p class="text-gray-400 mb-6 px-4 md:px-0 max-w-lg mx-auto md:mx-0">
+                        Una declaración de intenciones, fusionando la fuerza del House con las bases electrónicas del Future Bass,
+                        llevando a un sonido más agresivo y melancólico hasta la fecha.
+                    </p>
+					
+<!-- Accesos Directos a Plataformas - MODIFICADO: md:justify-start para alinear a la izquierda en escritorio -->
+<!-- ¡Esta sección se mantiene horizontal en escritorio y vertical en móvil, como deseas! -->
+                   
+<!-- Spotify -->				   
+					<div class="flex flex-col space-y-4 md:flex-row md:space-x-6 md:space-y-0 justify-center md:justify-start">
+                        <a href="URL_SPOTIFY" target="_blank" class="flex items-center justify-center p-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold transition duration-300 shadow-md hover:shadow-green-500/50 min-w-[150px]">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm6.2 17.5c-.3.5-.9.7-1.4.4-2.1-1.3-4.9-2.2-8.3-2.3-.5 0-.9.2-1.1.7-.2.5 0 1.1.5 1.3 3.9.3 7.2 1.4 9.6 3.1.5.3 1.1.1 1.4-.4.2-.5 0-1.1-.4-1.3zM20.2 14.1c-.2.5-.8.7-1.3.5-2.5-1.5-6.1-1.9-9.9-1.2-.5.1-1 .4-1.1.9-.1.5.1 1 .6 1.1 4.2-.7 8.2-.3 11 1.4.5.3 1.1.1 1.3-.4.2-.6 0-1.2-.5-1.4zM22 9.4c-.1.5-.7.8-1.2.6-2.6-1.4-7.8-1.9-13.2-1.2-.6.1-1.1.5-1.2 1-.1.5.2 1 .7 1.1 5.7-.7 11.2-.2 14.2 1.5.5.3 1.1.1 1.3-.4.2-.5 0-1.2-.4-1.4z"/></svg>
+                            Spotify
+                        </a>
+<!-- Soundcloud -->
+                        <a href="URL_SOUNDCLOUD" target="_blank" class="flex items-center justify-center p-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-semibold transition duration-300 shadow-md hover:shadow-orange-500/50 min-w-[150px]">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M18.8 17.1c-.1-1.5-1.3-2.7-2.7-2.7h-7c-.8 0-1.4.6-1.4 1.4v2.5c0 .8.6 1.4 1.4 1.4h7c1.4 0 2.6-1.2 2.7-2.7zM17.4 10.6c-.1-1.5-1.3-2.7-2.7-2.7h-7c-.8 0-1.4.6-1.4 1.4v2.5c0 .8.6 1.4 1.4 1.4h7c1.4 0 2.6-1.2 2.7-2.7zM16 4.1c-.1-1.5-1.3-2.7-2.7-2.7h-7c-.8 0-1.4.6-1.4 1.4v2.5c0 .8.6 1.4 1.4 1.4h7c1.4 0 2.6-1.2 2.7-2.7zM12 0c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm-3.8 21.6c-4.4 0-8.2-3.1-8.2-7.2s3.8-7.2 8.2-7.2c.4 0 .7.3.7.7s-.3.7-.7.7c-3.9 0-7.2 2.7-7.2 6.5s3.3 6.5 7.2 6.5c.4 0 .7.3.7.7s-.3.7-.7.7z"/></svg>
+                            Soundcloud
+                        </a>
+<!-- Youtube -->						
+                        <a href="URL_YOUTUBE" target="_blank" class="flex items-center justify-center p-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-semibold transition duration-300 shadow-md hover:shadow-red-500/50 min-w-[150px]">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 4.3C18.5 4.1 16.1 4 12 4s-6.5.1-6.9.3C4.7 4.5 4 5.2 4 6v12c0 .8.7 1.5 2.1 1.7C6.5 20.3 8.9 20.4 13 20.4s6.5-.1 6.9-.3c1.4-.2 2.1-.9 2.1-1.7V6c0-.8-.7-1.5-2.1-1.7zm-4 7.6l-5.4 3.4V8.5l5.4 3.4z"/></svg>
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: VIDEOS Y MUSIC (EMBEDS) -->
+		
+
+		<section id="media" class="section-padding text-center bg-gray-900/50 border-t border-purple-900/50">
+            <h2 class="text-4xl font-bold mb-10 text-center uppercase tracking-widest text-purple-400">Media & Videos</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-12">
+
+<!-- Video/Set Destacado 1 -->        
+
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-purple-900/90">
+                    <h3 class="text-2xl font-semibold text-white text-center mb-0 p-4 bg-gray-900 border-b border-purple-800">Winter Sunset Sessions</h3>
+                    <div class="p-4"> <div class="aspect-ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/cVFzblT5VPE?si=i4_5MulVh7cmTj6v?si=..." 
+							title="YouTube video player" 
+							frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- Video/Set Destacado 2 -->
+                
+				<div class="rounded-xl overflow-hidden shadow-2xl shadow-purple-900/90">
+                    <h3 class="text-2xl font-semibold text-white text-center mb-0 p-4 bg-gray-900 border-b border-purple-800">Próximo Lanzamiento</h3>
+                    <div class="p-4"> <div class="aspect-ratio-16x9">
+                            <iframe 
+                                src="https://www.youtube.com/embed/cVFzblT5VPE?si=i4_5MulVh7cmTj6v?si=..." 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                title="!!! Próximo Lanzamiento !!!">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+<!-- Video/Set Destacado 3 -->
+        
+		<section id="sets" class="section-padding text-center bg-gray-900/50 border-t border-purple-900/50">     
+            <h2 class="text-4xl font-bold mb-10 text-center uppercase tracking-widest text-purple-400">Set Destacado</h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-purple-900/90">
+                    <h3 class="text-2xl font-semibold mb-0 p-4 text-white text-center bg-gray-900 border-b border-purple-900/50">Próximo Lanzamiento Soundcloud</h3>
+                    
+                    <div class="p-4 flex justify-center"> <div class="w-full max-w-xl">
+                            <iframe width="100%" height="300" scrolling="no" 
+                            frameborder="no" allow="autoplay" 
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2097218970&color=%23e0a611&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                            </iframe>
+                            
+                            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                <a href="https://soundcloud.com/nicocardi" title="Nico Cardi" target="_blank" style="color: #cccccc; text-decoration: none;">Nico Cardi</a> · 
+                                <a href="https://soundcloud.com/nicocardi/cafe-movido-1" title="Café Movido 1" target="_blank" style="color: #cccccc; text-decoration: none;">Café Movido 1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+		
+		        <!-- SECCIÓN 3: GALERÍA DE FOTOS (Hi-Res) -->
+        <section id="fotos" class="section-padding text-center bg-gray-900/50 border-t border-purple-900/50">
+            <h2 class="text-4xl font-bold mb-10 uppercase tracking-widest text-purple-400 text-center">Galería de Fotos</h2>
+            
+            <p class="text-xl font-medium	 text-center text-white-800 mb-8">
+                Haga clic en una imagen para descargar la versión de alta resolución.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Foto 1 (Reemplazar con imagen real) -->
+                <a href="URL_FOTO_HR_1" target="_blank" class="block overflow-hidden rounded-lg shadow-xl hover:shadow-purple-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img 
+                        src="img/DSC_3828.jpg" 
+                        alt="Foto de prensa de B4 - Before" 
+                        class="w-full h-full object-cover aspect-[3/2]"
+                    >
+                </a>
+                <!-- Foto 2 (Reemplazar con imagen real) -->
+                <a href="URL_FOTO_HR_2" target="_blank" class="block overflow-hidden rounded-lg shadow-xl hover:shadow-purple-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img 
+                        src="img/FotoNico6.jpeg" 
+                        alt="Foto de prensa de B4 - Before" 
+                        class="w-full h-full object-cover aspect-[2/3]"
+                    >
+                </a>
+                <!-- Foto 3 (Reemplazar con imagen real) -->
+                <a href="URL_FOTO_HR_3" target="_blank" class="block overflow-hidden rounded-lg shadow-xl hover:shadow-purple-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img 
+                        src="img/FotoNico5.jpeg" 
+                        alt="Foto de prensa de B4 - Before" 
+                        class="w-full h-full object-cover aspect-[3/2]"
+                    >
+                </a>
+                <!-- Foto 4 (Reemplazar con imagen real) -->
+                <a href="URL_FOTO_HR_4" target="_blank" class="block overflow-hidden rounded-lg shadow-xl hover:shadow-purple-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img 
+                        src="img/FotoNico4.jpeg" 
+                        alt="Foto de prensa de B4 - Before" 
+                        class="w-full h-full object-cover aspect-[3/2] col-span-2 md:col-span-1"
+                    >
+                </a>
+                <!-- Foto 5 (Reemplazar con imagen real) -->
+                <a href="URL_FOTO_HR_5" target="_blank" class="block overflow-hidden rounded-lg shadow-xl hover:shadow-purple-500/50 transition duration-300 transform hover:scale-[1.02]">
+                    <img 
+                        src="img/FotoNico2.jpeg" 
+                        alt="Foto de prensa de B4 - Before" 
+                        class="w-full h-full object-cover aspect-[3/2]"
+                    >
+                </a>
+                <!-- Botón de Descarga de Pack Completo -->
+                <a href="img/img.zip" target="_blank" class="flex items-center justify-center bg-purple-900/50 hover:bg-purple-800/70 p-4 rounded-lg shadow-xl transition duration-300 text-purple-200 font-bold uppercase text-center">
+                    Descargar Paquete ZIP (Logos + Fotos)
+                </a>
+            </div>
+        </section>
+
+    
+        <!-- SECCIÓN 2: BIOGRAFÍA EXTENSA PARA PRENSA -->        
+		<section id="bio" class="section-padding text-center bg-gray-900/50 border-t border-purple-900/50">
+		
+		
+					<div class="rounded-xl overflow-hidden shadow-2xl shadow-purple-900/90">
+						<h3 class="text-2xl font-semibold text-white text-center mb-4 p-4 bg-gray-900 border-b border-purple-800">Biografía</h3>
+                
+						 <div class="max-w-3xl mx-auto space-y-1 px-4"> 
+							
+							<p class="text-xl font-medium text-white">
+								La esencia de Nico Cardi reside en la rica historia del Deep House y el Old School, reinterpretada a través de la lente de dos décadas de experiencia técnica y sonora de Nico Cardi. Es la perfecta síntesis entre la nostalgia melódica y la precisión del sonido contemporáneo.
+							</p>
+							
+							<p class="text-xl font-medium text-white">
+								Nico, con una sólida trayectoria en las bandejas, aplica una filosofía de ingeniería a su producción musical: cada beat, cada *bassline* y cada transición están meticulosamente diseñados para una experiencia inmersiva en la pista de baile. Su foco está en el *groove* profundo y las texturas orgánicas que definieron la era dorada de Chicago y Detroit.
+							</p>
+							
+							<p class="text-xl font-medium text-white">
+								El proyecto B4 es un puente entre generaciones de la música electrónica, ofreciendo sets que son tan educativos como bailables, y producciones que ya están marcando un nicho único en la escena global del Deep House.
+							</p>
+                        
+							<div class="max-w-md mx-auto py-8"> <div class="bg-black/10 p-6 rounded-xl border-4 border-[#665428]"> <p class="text-center text-gray-300 font-semibold mb-4">Descarga el Press Kit completo:</p>
+                                <a href="URL_PRESS_KIT_PDF_O_DRIVE_AQUI" target="_blank" class="block w-full bg-[#E5A65E] hover:bg-[#EABE3F] text-center text-black py-3 rounded-lg font-bold transition">
+                                    Descargar PDF EPK
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>	
+        </section>
+
+
+        <section id="contact" class="section-padding text-center bg-gray-900/50 border-t border-purple-900/90">
+		
+            <h2 class="text-4xl font-bold mb-3 uppercase tracking-widest text-[#EABE3F]">Contacto Profesional</h2>
+            
+				<p class="text-xl font-medium text-white mb-8 max-w-lg mx-auto">
+				
+					Para consultas de booking, entrevistas y rider técnico.
+				</p>
+
+            <div class="max-w-sm mx-auto">
+                <a href="https://wa.me/5491154897528/?text=WA BOOKING" target="_blank" class="block w-full bg-[#EABE3F] hover:bg-[#E5A65E] text-center text-black py-4 px-10 rounded-full font-bold uppercase tracking-wider transition duration-300 transform shadow-lg hover:shadow-[#EABE3F]/50">
+                    WHATSAPP PARA BOOKING
+                </a>
+            </div>
+            
+            <div class="mt-8 flex justify-center space-x-6 flex-wrap gap-y-4 max-w-3xl mx-auto px-4">
+                <a href="URL_RIDER_TECNICO" target="_blank" class="text-[#EABE3F] hover:text-white/80 font-medium transition duration-150">
+                    [ Descargar Rider Técnico ]
+                </a>
+                
+                <a href="URL_LOGO_ALTA_RES" target="_blank" class="text-[#EABE3F] hover:text-white/80 font-medium transition duration-150">
+                    [ Logo HD para Flyers ]
+                </a>
+                
+                <a href="URL_FOTOS_PRENSA" target="_blank" class="text-[#EABE3F] hover:text-white/80 font-medium transition duration-150">
+                    [ Fotos de Prensa (Alta Res.) ]
+                </a>
+            </div>
+        </section>
+        
+        
+    </div> <footer class="bg-gray-900 text-center py-4 border-t border-purple-900/50">
+        <p class="text-gray-500 text-sm">
+            © 2024 B4 - BEFORE. All Rights Reserved. EPK Desarrollado con ❤️.
+        </p>
+    </footer>
+
+</body>
+</html>
