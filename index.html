@@ -43,6 +43,49 @@
             text-shadow: 0 0 8px rgba(234, 190, 63, 0.7);
         }
     </style>
+	    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#a855f7', // purple-500
+                        'secondary': '#6366f1', // indigo-500
+                    },
+                }
+            }
+        }
+        
+        // Función para el menú hamburguesa (Mobile Menu Toggle)
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('menu-button');
+
+            if (menu.classList.contains('hidden')) {
+                // Mostrar menú
+                menu.classList.remove('hidden');
+                // Cambiar ícono a "X" (Close)
+                button.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>';
+            } else {
+                // Ocultar menú
+                menu.classList.add('hidden');
+                // Cambiar ícono a "Menú" (Hamburger)
+                button.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+            }
+        }
+
+        // Función para ocultar el menú después de hacer clic en un enlace (solo en móvil)
+        function hideMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('menu-button');
+            
+            // Solo ocultar si está visible
+            if (!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                // Cambiar ícono a "Menú" (Hamburger)
+                button.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+            }
+        }
+    </script>
 </head>
 <body class="bg-[#201A31] text-white min-h-screen">
 
@@ -69,7 +112,7 @@
 <!-- Contenido principal envuelto en un div para manejar el espaciado vertical -->            
 			
 			
-			<div class="pb-4"> <div class="bg-[#201A31]/80 p-6 rounded-xl inline-block mb-8 border-2 border-[#EABE3F]/50  shadow-2xl shadow-yellow-900/90">
+			<div class="pb-4"> <div class="bg-[#201A31]/80 p-6 rounded-xl inline-block mb-8 border-2 border-[#EABE3F]/50 shadow-2xl shadow-yellow-900/90">
                     <h1 class="text-6xl sm:text-7xl font-extrabold tracking-tight mb-2 uppercase text-[#EABE3F] drop-shadow-lg gold-glow">NICO CARDI</h1>
                     <p class="text-2xl font-light text-gray-200">Deep House • Old School</p>
                 </div>
@@ -283,22 +326,26 @@
     
         <!-- SECCIÓN 2: BIOGRAFÍA EXTENSA PARA PRENSA -->        
 		<section id="bio" class="section-padding text-center bg-gray-900/50 border-t border-purple-900/50">
+		
+		
+					<div class="rounded-xl overflow-hidden shadow-2xl shadow-purple-900/90">
+						<h3 class="text-2xl font-semibold text-white text-center mb-4 p-4 bg-gray-900 border-b border-purple-800">Biografía</h3>
                 
-		            <div class="rounded-xl mb-8 overflow-hidden shadow-2xl shadow-purple-900/90">
-
-						<h2 class="text-4xl font-bold  py-8 uppercase tracking-widest text-[#EABE3F] text-center gold-glow">Biografía</h2>
-                
-                     <div class="max-w-3xl mx-auto space-y-1 px-4"> <p class="text-xl font-medium text-white">
-                            La esencia de Nico Cardi reside en la rica historia del Deep House y el Old School, reinterpretada a través de la lente de dos décadas de experiencia técnica y sonora de Nico Cardi. Es la perfecta síntesis entre la nostalgia melódica y la precisión del sonido contemporáneo.
-                        </p>
-                        <p class="text-xl font-medium text-white">
-                            Nico, con una sólida trayectoria en las bandejas, aplica una filosofía de ingeniería a su producción musical: cada beat, cada *bassline* y cada transición están meticulosamente diseñados para una experiencia inmersiva en la pista de baile. Su foco está en el *groove* profundo y las texturas orgánicas que definieron la era dorada de Chicago y Detroit.
-                        </p>
-                        <p class="text-xl font-medium text-white">
-                            El proyecto B4 es un puente entre generaciones de la música electrónica, ofreciendo sets que son tan educativos como bailables, y producciones que ya están marcando un nicho único en la escena global del Deep House.
-                        </p>
+						 <div class="max-w-3xl mx-auto space-y-1 px-4"> 
+							
+							<p class="text-xl font-medium text-white">
+								La esencia de Nico Cardi reside en la rica historia del Deep House y el Old School, reinterpretada a través de la lente de dos décadas de experiencia técnica y sonora de Nico Cardi. Es la perfecta síntesis entre la nostalgia melódica y la precisión del sonido contemporáneo.
+							</p>
+							
+							<p class="text-xl font-medium text-white">
+								Nico, con una sólida trayectoria en las bandejas, aplica una filosofía de ingeniería a su producción musical: cada beat, cada *bassline* y cada transición están meticulosamente diseñados para una experiencia inmersiva en la pista de baile. Su foco está en el *groove* profundo y las texturas orgánicas que definieron la era dorada de Chicago y Detroit.
+							</p>
+							
+							<p class="text-xl font-medium text-white">
+								El proyecto B4 es un puente entre generaciones de la música electrónica, ofreciendo sets que son tan educativos como bailables, y producciones que ya están marcando un nicho único en la escena global del Deep House.
+							</p>
                         
-                        <div class="max-w-md mx-auto py-8"> <div class="bg-black/10 p-6 rounded-xl border-4 border-[#665428]"> <p class="text-center text-gray-300 font-semibold mb-4">Descarga el Press Kit completo:</p>
+							<div class="max-w-md mx-auto py-8"> <div class="bg-black/10 p-6 rounded-xl border-4 border-[#665428]"> <p class="text-center text-gray-300 font-semibold mb-4">Descarga el Press Kit completo:</p>
                                 <a href="URL_PRESS_KIT_PDF_O_DRIVE_AQUI" target="_blank" class="block w-full bg-[#E5A65E] hover:bg-[#EABE3F] text-center text-black py-3 rounded-lg font-bold transition">
                                     Descargar PDF EPK
                                 </a>
@@ -349,4 +396,3 @@
 
 </body>
 </html>
-
