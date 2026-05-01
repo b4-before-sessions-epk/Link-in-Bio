@@ -1,0 +1,77 @@
+/* HERO con imagen */
+.hero {
+    position: relative;
+    background-image: url('img/DSC_3856.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+/* OVERLAY SOCIAL */
+.social-overlay {
+    position: absolute;
+    bottom: 20 px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+	padding-bottom: 12px;
+	
+}
+
+/* CONTENEDOR GLASS */
+.social-container {
+    max-width: 420px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+
+    padding: 14px 22px;
+	
+	padding-bottom: 12px;
+
+    border-radius: 50px;
+
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(234,190,63,0.25);
+
+    box-shadow: 
+        0 10px 40px rgba(0,0,0,0.8),
+        0 0 25px rgba(234,190,63,0.15);
+}
+
+/* ICONOS */
+.social-container a {
+    color: #aaa;
+    transition: 0.3s;
+    transform: scale(1);
+}
+
+/* HOVER PRO */
+.social-container a:hover {
+    transform: translateY(-6px) scale(1.15);
+}
+
+/* COLORES + GLOW */
+.social-container a[aria-label="Instagram"]:hover {
+    color: #f56040;
+    text-shadow: 0 0 12px #f56040;
+}
+
+.social-container a[aria-label="YouTube"]:hover {
+    color: #ff0000;
+    text-shadow: 0 0 12px #ff0000;
+}
+
+.social-container a[aria-label="Spotify"]:hover {
+    color: #1ed760;
+    text-shadow: 0 0 12px #1ed760;
+}
+
+.social-container a[aria-label="SoundCloud"]:hover {
+    color: #ff8800;
+    text-shadow: 0 0 12px #ff8800;
+}
