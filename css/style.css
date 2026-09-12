@@ -71,6 +71,21 @@
     text-shadow: 0 0 12px #1ed760;
 }
 
+/* Imagen principal - Desktop */
+@media (min-width: 768px) {
+  .hero-header {
+    background-image: url('img/DSC_3856_D.jpg') !important;
+  }
+}
+
+/* Imagen principal - Mobile */
+@media (max-width: 767px) {
+  .hero-header {
+    background-image: url('img/DSC_3856.jpg') !important;
+  }
+}
+
+
 .social-container a[aria-label="SoundCloud"]:hover {
     color: #ff8800;
     text-shadow: 0 0 12px #ff8800;
