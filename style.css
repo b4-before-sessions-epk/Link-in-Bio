@@ -1,24 +1,177 @@
-/* HERO con imagen */
-.hero {
+/* =========================================================
+   NICO CARDI - PRESS KIT
+   CSS PRINCIPAL
+   ========================================================= */
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0A0A0A;
+    color: #e5e5e5;
+}
+
+
+/* =========================================================
+   TITULOS
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.section-padding {
+    padding: 5rem 1.5rem;
+}
+
+
+/* =========================================================
+   DORADO
+   ========================================================= */
+
+.gold {
+    color: #EABE3F;
+}
+
+.gold-border {
+    border-color: rgba(234, 190, 63, 0.4);
+}
+
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.gold-glow {
+    text-shadow: 0 0 12px rgba(234, 190, 63, 0.35);
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(234, 190, 63, 0.15);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(234, 190, 63, 0.15);
+}
+
+
+/* =========================================================
+   BOTONES DORADOS
+   ========================================================= */
+
+.btn-gold {
+    background: linear-gradient(135deg, #EABE3F, #C9A227);
+    color: #000;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 12px 28px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(234, 190, 63, 0.25);
+}
+
+.btn-gold:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(234, 190, 63, 0.5);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-header {
     position: relative;
-    background-image: url('img/DSC_3856.jpg');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
+    padding-bottom: 1px;
 }
 
-/* OVERLAY SOCIAL */
+
+/* =========================================================
+   HERO - DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+    .hero-header {
+        background-image: url('img/DSC_3856_D.jpg');
+    }
+}
+
+
+/* =========================================================
+   HERO - MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+    .hero-header {
+        background-image: url('img/DSC_3856.jpg');
+    }
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+   ========================================================= */
+
+.hero-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.95)
+    );
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.hero img {
+    object-position: 35% center;
+    filter: contrast(0.95) brightness(0.98) saturate(0.95);
+}
+
+
+/* =========================================================
+   SOCIAL OVERLAY
+   ========================================================= */
+
 .social-overlay {
     position: absolute;
-    bottom: 20 px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-	padding-bottom: 12px;
-	
+    padding-bottom: 12px;
 }
 
-/* CONTENEDOR GLASS */
+
+/* =========================================================
+   SOCIAL CONTAINER
+   ========================================================= */
+
 .social-container {
     max-width: 420px;
     margin: auto;
@@ -27,51 +180,89 @@
     justify-content: center;
     gap: 18px;
 
-    padding: 14px 22px;
-	
-	padding-bottom: 2px;
+    padding: 14px 22px 12px;
 
     border-radius: 50px;
 
-    background: rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(234,190,63,0.25);
+    border: 1px solid rgba(234, 190, 63, 0.25);
 
-    box-shadow: 
-        0 10px 40px rgba(0,0,0,0.8),
-        0 0 25px rgba(234,190,63,0.15);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(234, 190, 63, 0.15);
 }
 
-/* ICONOS */
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
 .social-container a {
     color: #aaa;
     transition: 0.3s;
     transform: scale(1);
 }
 
-/* HOVER PRO */
+
+/* =========================================================
+   SOCIAL HOVER
+   ========================================================= */
+
 .social-container a:hover {
     transform: translateY(-6px) scale(1.15);
 }
 
-/* COLORES + GLOW */
+
+/* =========================================================
+   INSTAGRAM
+   ========================================================= */
+
 .social-container a[aria-label="Instagram"]:hover {
     color: #f56040;
     text-shadow: 0 0 12px #f56040;
 }
+
+
+/* =========================================================
+   YOUTUBE
+   ========================================================= */
 
 .social-container a[aria-label="YouTube"]:hover {
     color: #ff0000;
     text-shadow: 0 0 12px #ff0000;
 }
 
+
+/* =========================================================
+   SPOTIFY
+   ========================================================= */
+
 .social-container a[aria-label="Spotify"]:hover {
     color: #1ed760;
     text-shadow: 0 0 12px #1ed760;
 }
 
+
+/* =========================================================
+   SOUNDCLOUD
+   ========================================================= */
+
 .social-container a[aria-label="SoundCloud"]:hover {
     color: #ff8800;
     text-shadow: 0 0 12px #ff8800;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #EABE3F;
 }
