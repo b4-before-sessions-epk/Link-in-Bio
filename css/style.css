@@ -7,6 +7,23 @@
     min-height: 80vh;
 }
 
+/* Imagen principal - Desktop */
+@media (min-width: 768px) {
+  .hero-header {
+    background-image: url('img/DSC_3856_D.jpg') !important;
+  }
+}
+
+/* Imagen principal - Mobile */
+@media (max-width: 767px) {
+  .hero-header {
+    background-image: url('img/DSC_3856.jpg') !important;
+  }
+}
+
+
+
+
 /* OVERLAY SOCIAL */
 .social-overlay {
     position: absolute;
@@ -77,16 +94,4 @@
     text-shadow: 0 0 12px #ff8800;
 }
 
-/* Imagen principal - Desktop */
-@media (min-width: 768px) {
-  .hero-header {
-    background-image: url('img/DSC_3856_D.jpg') !important;
-  }
-}
 
-/* Imagen principal - Mobile */
-@media (max-width: 767px) {
-  .hero-header {
-    background-image: url('img/DSC_3856.jpg') !important;
-  }
-}
