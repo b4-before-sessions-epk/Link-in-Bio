@@ -182,7 +182,7 @@ h3 {
     align-items: center;
     gap: 14px;
 
-    padding: 10px 18px;
+    padding: 4px 18px;
 
     border-radius: 999px;
 
@@ -197,6 +197,10 @@ h3 {
         0 0 12px rgba(234, 190, 63, 0.07);
 }
 
+.social-container svg {
+    width: 26px;
+    height: 26px;
+}
 /* =========================================================
    SOCIAL ICONS
    ========================================================= */
