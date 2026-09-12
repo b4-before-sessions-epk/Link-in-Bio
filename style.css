@@ -187,7 +187,7 @@ h3 {
     /* 2. Bordes suavizados para fusionar con el fondo */
     mask-image: radial-gradient(circle, black 70%, transparent 100%);
     -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
-
+} 
 /* 3. El truco definitivo: Una capa superior que esfuma los bordes hacia adentro */
 .hero::after {
     content: '';
