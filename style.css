@@ -132,6 +132,32 @@ h3 {
 
 
 /* =========================================================
+   PANTALLAS DESKTOP CON POCA ALTURA
+   Ej: TV 1366x768
+   ========================================================= */
+
+@media (min-width: 1024px) and (max-height: 800px) {
+
+    .hero-header {
+        min-height: 70vh;
+    }
+
+    .social-overlay {
+        bottom: 12px;
+    }
+
+    .social-container {
+        padding: 4px 18px;
+    }
+
+    .social-container svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+
+/* =========================================================
    HERO OVERLAY
    ========================================================= */
 
