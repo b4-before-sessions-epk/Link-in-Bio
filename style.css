@@ -45,7 +45,7 @@ h3 {
 }
 
 .gold-border {
-    border-color: rgba(234, 190, 63, 0.4);
+    : rgba(234, 190, 63, 0.4);
 }
 
 
@@ -190,7 +190,7 @@ h3 {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 
-    border: 1px solid rgba(234, 190, 63, 0.18);
+  /*  border: 1px solid rgba(234, 190, 63, 0.18);*/
 
     box-shadow:
         0 6px 20px rgba(0, 0, 0, 0.45),
