@@ -177,6 +177,13 @@ h3 {
 .hero img {
     object-position: 35% center;
     filter: contrast(0.95) brightness(0.98) saturate(0.95);
+
+       /* 1. Esquinas redondeadas */
+    border-radius: 12px; 
+    
+    /* 2. Bordes suavizados para fusionar con el fondo */
+    mask-image: radial-gradient(circle, black 70%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
 }
 
 
