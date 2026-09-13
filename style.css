@@ -103,7 +103,7 @@ h3 {
 .hero-header {
     position: relative;
     background-size: cover;
-    background-position: center;
+    background-position: center 35%;
     min-height: 80vh;
     padding-bottom: 1px;
 
@@ -149,6 +149,7 @@ h3 {
 @media (min-width: 1024px) and (max-height: 800px) {
 
     .hero-header {
+        background-position: center 25%;
         min-height: 70vh;
     }
 
